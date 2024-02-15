@@ -3,7 +3,9 @@ FROM python:latest
 RUN mkdir -p /usr/src/app
 
 # copy the current directory contents into the container at /app
-COPY . /usr/src/app
+COPY ./app /usr/src/app
+COPY ./requirements.txt /usr/src/app
+
 
 # Set the working directory
 WORKDIR /usr/src/app
